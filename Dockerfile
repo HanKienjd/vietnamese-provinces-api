@@ -21,5 +21,5 @@ COPY --from=builder /app/prisma ./prisma
 
 RUN npm run prisma:generate
 
-EXPOSE 8080
+EXPOSE ${PORT}
 CMD ["npm", "run", "start:prod"]
